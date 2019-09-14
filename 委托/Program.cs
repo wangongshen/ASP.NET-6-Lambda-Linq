@@ -39,11 +39,52 @@ namespace 委托
             action1("string");
             action2(123); 
             Console.WriteLine("------------Func委托（泛型）----------------------------");
-
+            //Fun<T> 声明泛型委托 肯定有返回值 参数可有
+            Func<int> Func1 = FuncM1;
+            int a = FuncM1();
+            Console.WriteLine("aaa:"+a);
+            Func<int, int, int, int> Func2=FuncM2;
+            int b = FuncM2(1,2,3);
+            Console.WriteLine("bbb:"+b);
+            Console.WriteLine("-------------多播委托，能绑定多个方法-----无返回值-------------------------------");
+            Action action3 = M3;
+            action3 += M4;
+            action3();
+            Console.WriteLine("-------------多播委托，能绑定多个方法-----有返回值-------------------------------");
+            Func<int, int, int, int> Func3 = FuncM2;
+            Func3 += FuncM3;
+            Delegate[] c = Func3.GetInvocationList();
+            for (int i = 0; i < c.Length; i++)
+            {
+                int ss = (c[i] as Func<int,int,int,int>)(1,2,3);
+                Console.WriteLine("ccc:" + ss);
+            }
 
         }
 
+        static void M3()
+        {
+            Console.WriteLine("M3----");
+        }
+        static void M4()
+        {
+            Console.WriteLine("M4---");
+        }
+         static int FuncM1()
+        {
+            return 1;
+        }
 
+        static int FuncM2(int n1,int n2,int n3)
+        {
+            Console.WriteLine("M2");
+            return n1 + n2 + n3;
+        }
+        static int FuncM3(int n1, int n2, int n3)
+        {
+            Console.WriteLine("M3");
+            return n1 - n2 - n3;
+        }
         public static void show()
         {
             Console.WriteLine("执行方法");
