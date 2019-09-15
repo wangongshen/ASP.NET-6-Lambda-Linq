@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "匿名方法", "匿名方�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lambda表达式", "Lambda表达式\Lambda表达式.csproj", "{38A3AA91-449C-4DDD-A0BD-1CF2D4C88CD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{A934A89C-073F-427E-91FA-AAD316B5E621}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{38A3AA91-449C-4DDD-A0BD-1CF2D4C88CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38A3AA91-449C-4DDD-A0BD-1CF2D4C88CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38A3AA91-449C-4DDD-A0BD-1CF2D4C88CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A934A89C-073F-427E-91FA-AAD316B5E621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A934A89C-073F-427E-91FA-AAD316B5E621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A934A89C-073F-427E-91FA-AAD316B5E621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A934A89C-073F-427E-91FA-AAD316B5E621}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
